@@ -104,6 +104,18 @@
 						"url": "{{baseUrl}}/network-config/v1alpha1/sites"
 					},
 					"response": []
+				},
+				{
+					"name": "Find Global ID",
+					"id": "8c6c004c-9c8c-4fbe-b61a-040f62370469",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "6d0af699-b8f4-4589-ba1f-539f2fc11667"
@@ -540,20 +552,7 @@
 		},
 		{
 			"name": "Utils",
-			"item": [
-				{
-					"name": "New Request",
-					"id": "8c6c004c-9c8c-4fbe-b61a-040f62370469",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				}
-			],
+			"item": [],
 			"id": "f9e8f9a8-25ce-4f94-892a-217dc11ba9f9"
 		}
 	],
