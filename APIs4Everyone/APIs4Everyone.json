@@ -537,6 +537,24 @@
 				}
 			],
 			"id": "76a4a172-31c9-44f2-bbdf-e3f299e9761f"
+		},
+		{
+			"name": "Utils",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "8c6c004c-9c8c-4fbe-b61a-040f62370469",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "f9e8f9a8-25ce-4f94-892a-217dc11ba9f9"
 		}
 	],
 	"auth": {
