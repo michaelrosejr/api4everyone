@@ -113,7 +113,28 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/network-config/v1alpha1/hierarchy?scopeType=site&scopeId=42598981779",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"network-config",
+								"v1alpha1",
+								"hierarchy"
+							],
+							"query": [
+								{
+									"key": "scopeType",
+									"value": "site"
+								},
+								{
+									"key": "scopeId",
+									"value": "42598981779"
+								}
+							]
+						}
 					},
 					"response": []
 				}
