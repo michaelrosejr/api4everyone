@@ -573,7 +573,35 @@
 		},
 		{
 			"name": "Utils",
-			"item": [],
+			"item": [
+				{
+					"name": "Delete Site",
+					"id": "cb39ffe9-0503-4d20-9f9f-a8ce59da3979",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "/network-config/v1alpha1/sites?scope-id=42598981779",
+							"path": [
+								"network-config",
+								"v1alpha1",
+								"sites"
+							],
+							"query": [
+								{
+									"key": "scope-id",
+									"value": "42598981779",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"id": "f9e8f9a8-25ce-4f94-892a-217dc11ba9f9"
 		}
 	],
