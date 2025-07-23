@@ -106,6 +106,28 @@
 					"response": []
 				},
 				{
+					"name": "Create Site Copy",
+					"id": "3cf480f4-578d-4094-ac80-fdfca6168df5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"name\": \"Home\",\n        \"city\": \"La Paz\",\n        \"state\": \"California\",\n        \"country\": \"United States\",\n        \"zipcode\": \"97204\",\n        \"address\": \"3333 Scotts Blvd\",\n        \"timezone\": {\n            \"rawOffset\": -28800000,\n            \"timezoneId\": \"America/Los_Angeles\",\n            \"timezoneName\": \"Pacific Standard Time\"\n        }\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/network-config/v1alpha1/sites"
+					},
+					"response": []
+				},
+				{
 					"name": "Find Global ID",
 					"id": "8c6c004c-9c8c-4fbe-b61a-040f62370469",
 					"protocolProfileBehavior": {
