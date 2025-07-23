@@ -602,7 +602,7 @@
 					"response": []
 				},
 				{
-					"name": "Debug API",
+					"name": "Debug API - Library ID",
 					"id": "1e3d7b88-20de-467b-889d-e60ea2d42787",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
