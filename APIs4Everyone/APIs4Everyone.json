@@ -239,7 +239,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"vlan\": 30,\n            \"voice-enable\": false,\n            \"enable\": true,\n            \"dhcpv4-snooping\": {\n                \"enable\": false\n            },\n            \"dhcpv6-snooping\": {\n                \"enable\": false\n            }\n}",
+							"raw": "{\n    \"vlan\": {{vlan_id}},\n    \"voice-enable\": false,\n    \"enable\": true,\n    \"dhcpv4-snooping\": {\n        \"enable\": false\n    },\n    \"dhcpv6-snooping\": {\n        \"enable\": false\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -272,7 +272,7 @@
 							"variable": [
 								{
 									"key": "VLANID",
-									"value": "30"
+									"value": "{{vlan_id}}"
 								}
 							]
 						}
