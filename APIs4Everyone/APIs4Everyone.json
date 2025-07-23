@@ -602,7 +602,7 @@
 					"response": []
 				},
 				{
-					"name": "Debug API - Library ID",
+					"name": "Set Library ID - Debug API -",
 					"event": [
 						{
 							"listen": "test",
@@ -634,6 +634,32 @@
 						}
 					],
 					"id": "1e3d7b88-20de-467b-889d-e60ea2d42787",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/cnxdevice/v1/debug/get_scope_data"
+					},
+					"response": []
+				},
+				{
+					"name": "Debug API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2f7b57aa-ed1b-43db-a75b-f9b9e0f715a3",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "8bc99c41-4333-4018-9137-2fb27675b67e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
