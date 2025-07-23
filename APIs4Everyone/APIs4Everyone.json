@@ -600,6 +600,18 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Debug API",
+					"id": "1e3d7b88-20de-467b-889d-e60ea2d42787",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "f9e8f9a8-25ce-4f94-892a-217dc11ba9f9"
