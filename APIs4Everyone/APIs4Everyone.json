@@ -198,7 +198,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan",
+							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan?persona=SHARED",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -217,6 +217,11 @@
 									"key": "scope_id",
 									"value": "42598981779",
 									"disabled": true
+								},
+								{
+									"key": "persona",
+									"value": "SHARED",
+									"type": "text"
 								}
 							]
 						}
