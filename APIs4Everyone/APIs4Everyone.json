@@ -224,6 +224,50 @@
 					"response": []
 				},
 				{
+					"name": "Create VLAN in Library Copy",
+					"id": "408531ec-2180-433e-8fd9-baa3f580a3c5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"l2-vlan\": [\n        {\n            \"vlan\": 30,\n            \"name\": \"Guest\",\n            \"is-l3-vlan\": null\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"network-config",
+								"v1alpha1",
+								"layer2-vlan"
+							],
+							"query": [
+								{
+									"key": "view_type",
+									"value": "LOCAL",
+									"disabled": true
+								},
+								{
+									"key": "scope_id",
+									"value": "42598981779",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "List VLANs in Library Copy",
 					"id": "3e27a9a9-a45d-434f-89a3-a9a6928b7441",
 					"protocolProfileBehavior": {
