@@ -234,7 +234,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"l2-vlan\": [\n        {\n            \"vlan\": 30,\n            \"name\": \"Guest\",\n            \"is-l3-vlan\": null\n        }\n    ]\n}",
+							"raw": "{\n    \"vlan\": 30,\n            \"voice-enable\": false,\n            \"enable\": true,\n            \"dhcpv4-snooping\": {\n                \"enable\": false\n            },\n            \"dhcpv6-snooping\": {\n                \"enable\": false\n            }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -242,14 +242,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan",
+							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan/:VLANID",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"network-config",
 								"v1alpha1",
-								"layer2-vlan"
+								"layer2-vlan",
+								":VLANID"
 							],
 							"query": [
 								{
@@ -261,6 +262,12 @@
 									"key": "scope_id",
 									"value": "42598981779",
 									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "VLANID",
+									"value": "30"
 								}
 							]
 						}
