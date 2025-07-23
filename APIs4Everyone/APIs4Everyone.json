@@ -94,29 +94,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n            \"collectionId\": null,\n            \"collectionName\": null,\n            \"country\": \"United States\",\n            \"timezone\": {\n                \"rawOffset\": -28800000,\n                \"timezoneId\": \"America/Los_Angeles\",\n                \"timezoneName\": \"Pacific Standard Time\"\n            },\n            \"zipcode\": \"97204\",\n            \"image\": null,\n            \"address\": \"308 SW 2nd Ave\",\n            \"deviceCount\": 0,\n            \"longitude\": -122.6757761,\n            \"type\": \"network-config/sites\",\n            \"scopeName\": \"Portland\",\n            \"state\": \"Oregon\",\n            \"latitude\": 45.5201545,\n            \"city\": \"Portland\"\n        }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{baseUrl}}/network-config/v1alpha1/sites"
-					},
-					"response": []
-				},
-				{
-					"name": "Create Site Copy",
-					"id": "3cf480f4-578d-4094-ac80-fdfca6168df5",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n        \"name\": \"Home\",\n        \"city\": \"La Paz\",\n        \"state\": \"California\",\n        \"country\": \"United States\",\n        \"zipcode\": \"97204\",\n        \"address\": \"3333 Scotts Blvd\",\n        \"timezone\": {\n            \"rawOffset\": -28800000,\n            \"timezoneId\": \"America/Los_Angeles\",\n            \"timezoneName\": \"Pacific Standard Time\"\n        }\n    }",
+							"raw": "{\n    \"name\": \"SeattleHQ\",\n    \"city\": \"Seattle\",\n    \"state\": \"Washington\",\n    \"country\": \"United States\",\n    \"zipcode\": \"98134\",\n    \"address\": \"2401 Utah Ave S\",\n    \"timezone\": {\n        \"rawOffset\": -28800000,\n        \"timezoneId\": \"America/Los_Angeles\",\n        \"timezoneName\": \"Pacific Standard Time\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
