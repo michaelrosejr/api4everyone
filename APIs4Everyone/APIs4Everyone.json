@@ -764,12 +764,40 @@
 							"request": {
 								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "text",
+											"uuid": "f311797f-9eaf-4a70-95d0-c3a9e5779724"
+										},
+										{
+											"key": "client_id",
+											"value": "{{glp_client_id}}",
+											"type": "text",
+											"uuid": "0ab21156-5050-441f-88e9-504d7b2b16b8"
+										},
+										{
+											"key": "client_secret",
+											"value": "{{glp_secret}}",
+											"type": "text",
+											"uuid": "0978df67-daba-48f3-ba74-4cb779605859"
+										}
+									]
+								},
 								"url": "https://sso.common.cloud.hpe.com/as/token.oauth2"
 							},
 							"response": []
 						}
 					],
 					"id": "591a0ce3-f4e4-4d0c-b825-bff7a99d2f1f"
+				},
+				{
+					"name": "Subscriptions",
+					"item": [],
+					"id": "eba279d4-add6-472a-8963-e1338dca5177"
 				}
 			],
 			"id": "1d9e5800-6e4d-444f-8747-83eddac24f22",
