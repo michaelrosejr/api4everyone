@@ -935,7 +935,8 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{baseUrl}}/network-config/v1alpha1/policies"
 					},
 					"response": []
 				}
