@@ -227,62 +227,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "Create VLAN in Global",
-					"id": "408531ec-2180-433e-8fd9-baa3f580a3c5",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"l2-vlan\": [\n        {\n            \"vlan\": 44,\n            \"enable\": true,\n            \"description\": \"api4everyone\"\n            \n        }\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan/:VLANID?persona=GLOBAL",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"network-config",
-								"v1alpha1",
-								"layer2-vlan",
-								":VLANID"
-							],
-							"query": [
-								{
-									"key": "view_type",
-									"value": "LOCAL",
-									"disabled": true
-								},
-								{
-									"key": "scope_id",
-									"value": "42598981779",
-									"disabled": true
-								},
-								{
-									"key": "persona",
-									"value": "GLOBAL",
-									"type": "text"
-								}
-							],
-							"variable": [
-								{
-									"key": "VLANID",
-									"value": "{{vlan_id}}"
-								}
-							]
-						}
-					},
-					"response": []
 				}
 			],
 			"id": "e24be0f0-c77e-4339-96d4-2bc8c26c7cd3"
@@ -597,144 +541,6 @@
 			"id": "76a4a172-31c9-44f2-bbdf-e3f299e9761f"
 		},
 		{
-			"name": "Utils",
-			"item": [
-				{
-					"name": "Delete Site",
-					"id": "cb39ffe9-0503-4d20-9f9f-a8ce59da3979",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "/network-config/v1alpha1/sites?scope-id=42598981779",
-							"path": [
-								"network-config",
-								"v1alpha1",
-								"sites"
-							],
-							"query": [
-								{
-									"key": "scope-id",
-									"value": "42598981779",
-									"type": "text"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Set Library ID - Debug API -",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "2f7b57aa-ed1b-43db-a75b-f9b9e0f715a3",
-								"exec": [
-									"// if (pm.response.code == 200){",
-									"//     console.log('Successfully obtained Global/Library ID')",
-									"//     const response = pm.response.json()",
-									"//     var access_token = response['access_token']",
-									"//     console.info('Setting Global/Library ID(globalId) in Postman environment')",
-									"//     pm.environment.set(\"globalId\", access_token);",
-									"    ",
-									"// }",
-									"if (pm.response.code == 200){",
-									"    const response = pm.response.json()",
-									"    const devices = response['devices']",
-									"    for (const device of devices) {",
-									"        if (device.type == \"GLOBAL\") {",
-									"            console.log(\"globalId set to: \", device.scope_id)",
-									"            pm.environment.set(\"globalId\", device.scope_id);",
-									"        }",
-									"    }",
-									"}"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "1e3d7b88-20de-467b-889d-e60ea2d42787",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{baseUrl}}/cnxdevice/v1/debug/get_scope_data"
-					},
-					"response": []
-				},
-				{
-					"name": "Debug API",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "2f7b57aa-ed1b-43db-a75b-f9b9e0f715a3",
-								"exec": [
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "8bc99c41-4333-4018-9137-2fb27675b67e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{baseUrl}}/cnxdevice/v1/debug/get_scope_data"
-					},
-					"response": []
-				},
-				{
-					"name": "List VLANs in Library Copy",
-					"id": "3e27a9a9-a45d-434f-89a3-a9a6928b7441",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan/20",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"network-config",
-								"v1alpha1",
-								"layer2-vlan",
-								"20"
-							],
-							"query": [
-								{
-									"key": "view_type",
-									"value": "LOCAL",
-									"disabled": true
-								},
-								{
-									"key": "scope_id",
-									"value": "42598981779",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"id": "f9e8f9a8-25ce-4f94-892a-217dc11ba9f9"
-		},
-		{
 			"name": "GLP",
 			"item": [
 				{
@@ -960,6 +766,239 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Utils",
+			"item": [
+				{
+					"name": "Delete Site",
+					"id": "cb39ffe9-0503-4d20-9f9f-a8ce59da3979",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "/network-config/v1alpha1/sites?scope-id=42598981779",
+							"path": [
+								"network-config",
+								"v1alpha1",
+								"sites"
+							],
+							"query": [
+								{
+									"key": "scope-id",
+									"value": "42598981779",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Library ID - Debug API -",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2f7b57aa-ed1b-43db-a75b-f9b9e0f715a3",
+								"exec": [
+									"// if (pm.response.code == 200){",
+									"//     console.log('Successfully obtained Global/Library ID')",
+									"//     const response = pm.response.json()",
+									"//     var access_token = response['access_token']",
+									"//     console.info('Setting Global/Library ID(globalId) in Postman environment')",
+									"//     pm.environment.set(\"globalId\", access_token);",
+									"    ",
+									"// }",
+									"if (pm.response.code == 200){",
+									"    const response = pm.response.json()",
+									"    const devices = response['devices']",
+									"    for (const device of devices) {",
+									"        if (device.type == \"GLOBAL\") {",
+									"            console.log(\"globalId set to: \", device.scope_id)",
+									"            pm.environment.set(\"globalId\", device.scope_id);",
+									"        }",
+									"    }",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "1e3d7b88-20de-467b-889d-e60ea2d42787",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/cnxdevice/v1/debug/get_scope_data"
+					},
+					"response": []
+				},
+				{
+					"name": "Debug API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2f7b57aa-ed1b-43db-a75b-f9b9e0f715a3",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "8bc99c41-4333-4018-9137-2fb27675b67e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/cnxdevice/v1/debug/get_scope_data"
+					},
+					"response": []
+				},
+				{
+					"name": "List VLANs in Library Copy",
+					"id": "3e27a9a9-a45d-434f-89a3-a9a6928b7441",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan/20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"network-config",
+								"v1alpha1",
+								"layer2-vlan",
+								"20"
+							],
+							"query": [
+								{
+									"key": "view_type",
+									"value": "LOCAL",
+									"disabled": true
+								},
+								{
+									"key": "scope_id",
+									"value": "42598981779",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "f9e8f9a8-25ce-4f94-892a-217dc11ba9f9"
+		},
+		{
+			"name": "Scopes",
+			"item": [
+				{
+					"name": "VLANs",
+					"item": [
+						{
+							"name": "List VLANs",
+							"id": "f9bca49a-1c72-4867-a399-30861140488f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"network-config",
+										"v1alpha1",
+										"layer2-vlan"
+									],
+									"query": [
+										{
+											"key": "view_type",
+											"value": "LOCAL",
+											"disabled": true
+										},
+										{
+											"key": "scope_id",
+											"value": "42598981779",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create VLAN in Scope",
+							"id": "408531ec-2180-433e-8fd9-baa3f580a3c5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"l2-vlan\": [\n        {\n            \"vlan\": 44,\n            \"enable\": true,\n            \"description\": \"api4everyone\"\n            \n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan?scope_id=44120773658",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"network-config",
+										"v1alpha1",
+										"layer2-vlan"
+									],
+									"query": [
+										{
+											"key": "view_type",
+											"value": "LOCAL",
+											"disabled": true
+										},
+										{
+											"key": "scope_id",
+											"value": "44120773658"
+										},
+										{
+											"key": "persona",
+											"value": "GLOBAL",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "879e0048-fde6-45fb-9599-2de53d6c7009"
+				}
+			],
+			"id": "61857af8-f8f1-4748-b2fe-16bc0f7d23f8"
 		}
 	],
 	"auth": {
