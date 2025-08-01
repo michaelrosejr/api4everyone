@@ -913,6 +913,31 @@
 						"header": []
 					},
 					"response": []
+				},
+				{
+					"name": "List scope-maps",
+					"id": "ff9669ad-4d1d-4026-a530-1c89b4ef1a15",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/scope-maps"
+					},
+					"response": []
+				},
+				{
+					"name": "List Policies",
+					"id": "1b6c1cfe-7109-426b-819c-0e0279df4167",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "f9e8f9a8-25ce-4f94-892a-217dc11ba9f9"
@@ -1008,19 +1033,6 @@
 						}
 					],
 					"id": "879e0048-fde6-45fb-9599-2de53d6c7009"
-				},
-				{
-					"name": "List scope-maps",
-					"id": "ff9669ad-4d1d-4026-a530-1c89b4ef1a15",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{baseUrl}}/scope-maps"
-					},
-					"response": []
 				}
 			],
 			"id": "61857af8-f8f1-4748-b2fe-16bc0f7d23f8"
