@@ -996,6 +996,18 @@
 						}
 					],
 					"id": "879e0048-fde6-45fb-9599-2de53d6c7009"
+				},
+				{
+					"name": "View Hierarchy",
+					"id": "465152a1-a3f4-4439-8f90-f6aac5b61cc3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "61857af8-f8f1-4748-b2fe-16bc0f7d23f8"
