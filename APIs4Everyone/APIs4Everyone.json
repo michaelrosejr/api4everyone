@@ -795,20 +795,71 @@
 					"id": "591a0ce3-f4e4-4d0c-b825-bff7a99d2f1f"
 				},
 				{
-					"name": "Subscriptions",
-					"item": [],
+					"name": "Devices",
+					"item": [
+						{
+							"name": "List Devices",
+							"id": "23dd8b9c-9235-48e2-95a4-299ae29b0174",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						},
+						{
+							"name": "Show Device",
+							"id": "11093285-00f2-4f9f-95a7-10cbd9b18fd5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://global.api.greenlake.hpe.com/devices/v1/devices/:id",
+									"protocol": "https",
+									"host": [
+										"global",
+										"api",
+										"greenlake",
+										"hpe",
+										"com"
+									],
+									"path": [
+										"devices",
+										"v1",
+										"devices",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
 					"id": "eba279d4-add6-472a-8963-e1338dca5177"
 				}
 			],
 			"id": "1d9e5800-6e4d-444f-8747-83eddac24f22",
 			"auth": {
-				"type": "noauth"
+				"type": "bearer",
+				"bearer": {
+					"token": "{{glp_token}}"
+				}
 			},
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "3b65b966-69a8-42ee-b3fd-fe644d7dd1c0",
+						"id": "70671f43-3c78-43ab-b434-96b8941e64d2",
 						"type": "text/javascript",
 						"packages": {},
 						"exec": [
@@ -819,7 +870,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "5798fa87-c66e-4112-a943-bef0ac845a30",
+						"id": "bfcd6663-83e5-4091-b142-5495c0097236",
 						"type": "text/javascript",
 						"packages": {},
 						"exec": [
