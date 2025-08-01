@@ -21,7 +21,7 @@
 									"    const response = pm.response.json()",
 									"    var access_token = response['access_token']",
 									"    console.info('Setting Access Token(bearerToken) in Postman environment')",
-									"    pm.environment.set(\"glp_token\", access_token);",
+									"    pm.environment.set(\"central_token\", access_token);",
 									"    console.log('You are now ready & authenticated to make API calls to your new HPE Aruba Networking Central account')",
 									"}"
 								],
@@ -273,42 +273,6 @@
 								{
 									"key": "VLANID",
 									"value": "{{vlan_id}}"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "List VLANs in Library Copy",
-					"id": "3e27a9a9-a45d-434f-89a3-a9a6928b7441",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan/20",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"network-config",
-								"v1alpha1",
-								"layer2-vlan",
-								"20"
-							],
-							"query": [
-								{
-									"key": "view_type",
-									"value": "LOCAL",
-									"disabled": true
-								},
-								{
-									"key": "scope_id",
-									"value": "42598981779",
-									"disabled": true
 								}
 							]
 						}
@@ -725,6 +689,42 @@
 						"url": "{{baseUrl}}/cnxdevice/v1/debug/get_scope_data"
 					},
 					"response": []
+				},
+				{
+					"name": "List VLANs in Library Copy",
+					"id": "3e27a9a9-a45d-434f-89a3-a9a6928b7441",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan/20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"network-config",
+								"v1alpha1",
+								"layer2-vlan",
+								"20"
+							],
+							"query": [
+								{
+									"key": "view_type",
+									"value": "LOCAL",
+									"disabled": true
+								},
+								{
+									"key": "scope_id",
+									"value": "42598981779",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "f9e8f9a8-25ce-4f94-892a-217dc11ba9f9"
@@ -734,6 +734,26 @@
 			"item": [
 				{
 					"name": "New Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "556c684c-d7f1-4d4b-a1af-3aae48e10477",
+								"exec": [
+									"if (pm.response.code == 200){",
+									"    console.log('Successfully obtained Access Token')",
+									"    const response = pm.response.json()",
+									"    var access_token = response['access_token']",
+									"    console.info('Setting Access Token(bearerToken) in Postman environment')",
+									"    pm.environment.set(\"glp_token\", access_token);",
+									"    console.log('You are now ready & authenticated to make API calls to your new HPE Aruba Networking Central account')",
+									"}"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "a688e9b6-9cee-4435-bd0e-870f408b2e60",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -746,7 +766,34 @@
 					"response": []
 				}
 			],
-			"id": "1d9e5800-6e4d-444f-8747-83eddac24f22"
+			"id": "1d9e5800-6e4d-444f-8747-83eddac24f22",
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3b65b966-69a8-42ee-b3fd-fe644d7dd1c0",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "5798fa87-c66e-4112-a943-bef0ac845a30",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
 		}
 	],
 	"auth": {
