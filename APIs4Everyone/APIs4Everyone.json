@@ -843,6 +843,28 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Update Device",
+							"id": "9e91d5d0-ed2f-4a1b-a8ae-fbfff37db5f3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"subscription\": [\n        {\n            \"id\": \"string\"\n        }\n    ],\n    \"application\": {\n        \"id\": \"string\"\n    },\n    \"region\": \"string\",\n    \"tenantPlatformCustomerId\": \"string\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://global.api.greenlake.hpe.com/devices/v1/device"
+							},
+							"response": []
 						}
 					],
 					"id": "eba279d4-add6-472a-8963-e1338dca5177"
