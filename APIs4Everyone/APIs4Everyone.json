@@ -731,7 +731,21 @@
 		},
 		{
 			"name": "GLP",
-			"item": [],
+			"item": [
+				{
+					"name": "New Request",
+					"id": "a688e9b6-9cee-4435-bd0e-870f408b2e60",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "https://sso.common.cloud.hpe.com/as/token.oauth2"
+					},
+					"response": []
+				}
+			],
 			"id": "1d9e5800-6e4d-444f-8747-83eddac24f22"
 		}
 	],
