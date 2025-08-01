@@ -846,6 +846,60 @@
 						}
 					],
 					"id": "eba279d4-add6-472a-8963-e1338dca5177"
+				},
+				{
+					"name": "Subscriptions",
+					"item": [
+						{
+							"name": "List subscriptions",
+							"id": "c83b729e-bd43-480b-9b5a-21b2e9155b8c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "https://global.api.greenlake.hpe.com/subscriptions/v1/subscriptions"
+							},
+							"response": []
+						},
+						{
+							"name": "Show Subscription",
+							"id": "55a3b1cb-1257-40e0-8a1f-e8671acc8a9f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://global.api.greenlake.hpe.com/subscriptions/v1/subscriptions/:id",
+									"protocol": "https",
+									"host": [
+										"global",
+										"api",
+										"greenlake",
+										"hpe",
+										"com"
+									],
+									"path": [
+										"subscriptions",
+										"v1",
+										"subscriptions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "14649fbc-eb56-50b1-9e0e-e6abf5b443db"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "b0c61b7e-fb13-444c-9048-cbeecae9cb05"
 				}
 			],
 			"id": "1d9e5800-6e4d-444f-8747-83eddac24f22",
