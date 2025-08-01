@@ -901,6 +901,18 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "View Hierarchy",
+					"id": "465152a1-a3f4-4439-8f90-f6aac5b61cc3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "f9e8f9a8-25ce-4f94-892a-217dc11ba9f9"
@@ -998,14 +1010,15 @@
 					"id": "879e0048-fde6-45fb-9599-2de53d6c7009"
 				},
 				{
-					"name": "View Hierarchy",
-					"id": "465152a1-a3f4-4439-8f90-f6aac5b61cc3",
+					"name": "List scope-maps",
+					"id": "ff9669ad-4d1d-4026-a530-1c89b4ef1a15",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{baseUrl}}/scope-maps"
 					},
 					"response": []
 				}
