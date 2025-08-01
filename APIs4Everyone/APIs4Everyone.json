@@ -733,37 +733,43 @@
 			"name": "GLP",
 			"item": [
 				{
-					"name": "New Request",
-					"event": [
+					"name": "Authentication",
+					"item": [
 						{
-							"listen": "test",
-							"script": {
-								"id": "556c684c-d7f1-4d4b-a1af-3aae48e10477",
-								"exec": [
-									"if (pm.response.code == 200){",
-									"    console.log('Successfully obtained Access Token')",
-									"    const response = pm.response.json()",
-									"    var access_token = response['access_token']",
-									"    console.info('Setting Access Token(bearerToken) in Postman environment')",
-									"    pm.environment.set(\"glp_token\", access_token);",
-									"    console.log('You are now ready & authenticated to make API calls to your new HPE Aruba Networking Central account')",
-									"}"
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
+							"name": "Generate GLP Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "556c684c-d7f1-4d4b-a1af-3aae48e10477",
+										"exec": [
+											"if (pm.response.code == 200){",
+											"    console.log('Successfully obtained Access Token')",
+											"    const response = pm.response.json()",
+											"    var access_token = response['access_token']",
+											"    console.info('Setting Access Token(bearerToken) in Postman environment')",
+											"    pm.environment.set(\"glp_token\", access_token);",
+											"    console.log('You are now ready & authenticated to make API calls to your new HPE Aruba Networking Central account')",
+											"}"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "a688e9b6-9cee-4435-bd0e-870f408b2e60",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "https://sso.common.cloud.hpe.com/as/token.oauth2"
+							},
+							"response": []
 						}
 					],
-					"id": "a688e9b6-9cee-4435-bd0e-870f408b2e60",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"url": "https://sso.common.cloud.hpe.com/as/token.oauth2"
-					},
-					"response": []
+					"id": "591a0ce3-f4e4-4d0c-b825-bff7a99d2f1f"
 				}
 			],
 			"id": "1d9e5800-6e4d-444f-8747-83eddac24f22",
@@ -799,14 +805,14 @@
 	"auth": {
 		"type": "bearer",
 		"bearer": {
-			"token": "{{glp_token}}"
+			"token": "{{central_token}}"
 		}
 	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "17ce0fef-e0f1-4563-9e3e-92cef802c5e8",
+				"id": "0639f687-f313-4c38-b4c8-4c424e0fe135",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -817,7 +823,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "9c248530-99c0-4b1f-a50f-6a8475311271",
+				"id": "af388c17-6bac-4c7f-9016-82a64a577175",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
