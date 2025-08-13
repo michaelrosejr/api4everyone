@@ -240,42 +240,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"l2-vlan\": [\n        {\n            \"vlan\": 5,\n            \"enable\": true,\n            \"description\": \"api4everyone\"\n            \n        }\n    ]\n}",
+							"raw": "{\n  \"scope-map\": [\n    {\n      \"scope-name\": \"44412250081\",\n      \"persona\": \"CAMPUS_AP\",\n      \"resource\": \"layer2-vlan/5\"\n    }\n  ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan/5",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"network-config",
-								"v1alpha1",
-								"layer2-vlan",
-								"5"
-							],
-							"query": [
-								{
-									"key": "object_type",
-									"value": "LOCAL",
-									"disabled": true
-								},
-								{
-									"key": "scope_id",
-									"value": "44120773658",
-									"disabled": true
-								},
-								{
-									"key": "persona",
-									"value": "LOCAL",
-									"disabled": true
-								}
-							]
-						}
+						"url": "{{baseUrl}}/network-config/v1alpha1/scope-maps"
 					},
 					"response": []
 				}
