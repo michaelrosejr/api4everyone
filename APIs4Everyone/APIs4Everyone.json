@@ -190,7 +190,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"l2-vlan\": [\n        {\n            \"vlan\": 991,\n            \"enable\": true,\n            \"description\": \"api4everyone\"\n            \n        }\n    ]\n}",
+							"raw": "{\n    \"l2-vlan\": [\n        {\n            \"vlan\": 5,\n            \"enable\": true,\n            \"description\": \"api4everyone\"\n            \n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -198,14 +198,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan",
+							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan/5",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"network-config",
 								"v1alpha1",
-								"layer2-vlan"
+								"layer2-vlan",
+								"5"
 							],
 							"query": [
 								{
@@ -215,7 +216,7 @@
 								},
 								{
 									"key": "scope_id",
-									"value": "26860471281",
+									"value": "44120773658",
 									"disabled": true
 								},
 								{
