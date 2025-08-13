@@ -280,7 +280,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids?view_type=LOCAL&scope_id=42598981779",
+							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -292,11 +292,13 @@
 							"query": [
 								{
 									"key": "view_type",
-									"value": "LOCAL"
+									"value": "LOCAL",
+									"disabled": true
 								},
 								{
 									"key": "scope_id",
-									"value": "42598981779"
+									"value": "44120773658",
+									"disabled": true
 								}
 							]
 						}
@@ -314,7 +316,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"wlan-ssid\": [\n        {\n            \"ssid\": \"Test1111\"\n        }\n    ]\n}",
+							"raw": "{\n  \"wlan_ssid\": {\n    \"essid\": \"MyLab12Workshop\",\n    \"type\": \"employee\",\n    \"hide_ssid\": false,\n    \"vlan\": \"\",\n    \"zone\": \"\",\n    \"opmode\": {\n      \"name\": \"wpa2-psk-mixed\"\n    },\n    \"wpa_passphrase\": \"YourSecurePassword123!\",\n    \"wpa_passphrase_changed\": true,\n    \"is_locked\": false,\n    \"captive_profile_name\": \"\",\n    \"bandwidth_limit_up\": \"\",\n    \"bandwidth_limit_down\": \"\",\n    \"bandwidth_limit_peruser_up\": \"\",\n    \"bandwidth_limit_peruser_down\": \"\",\n    \"access_rules\": []\n  }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -322,7 +324,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids?object_type=LOCAL&scope_id=42598981779",
+							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids?object_type=LOCAL&scope_id=44412250081&persona=LOCAL",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -334,12 +336,15 @@
 							"query": [
 								{
 									"key": "object_type",
-									"value": "LOCAL",
-									"type": "text"
+									"value": "LOCAL"
 								},
 								{
 									"key": "scope_id",
-									"value": "42598981779",
+									"value": "44412250081"
+								},
+								{
+									"key": "persona",
+									"value": "LOCAL",
 									"type": "text"
 								}
 							]
@@ -639,7 +644,8 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": "https://global.api.greenlake.hpe.com/devices/v1/devices"
 							},
 							"response": []
 						},
