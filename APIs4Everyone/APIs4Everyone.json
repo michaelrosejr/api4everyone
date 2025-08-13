@@ -115,7 +115,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/hierarchy?scopeType=site&scopeId=42598981779",
+							"raw": "{{baseUrl}}/network-config/v1alpha1/hierarchy?scopeType=site&scopeId=",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -131,7 +131,7 @@
 								},
 								{
 									"key": "scopeId",
-									"value": "42598981779"
+									"value": ""
 								}
 							]
 						}
