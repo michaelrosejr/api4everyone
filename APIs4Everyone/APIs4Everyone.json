@@ -1073,6 +1073,24 @@
 				}
 			],
 			"id": "61857af8-f8f1-4748-b2fe-16bc0f7d23f8"
+		},
+		{
+			"name": "Star Wars",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "0ba6dd27-de7f-4290-8514-db25f2d855c8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "31b62380-fbee-43f6-bac3-d04d844a0e21"
 		}
 	],
 	"auth": {
