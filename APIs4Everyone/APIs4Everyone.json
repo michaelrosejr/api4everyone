@@ -315,7 +315,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{      \"wlan-ssid\": [{\n            \"opmode\": \"WPA2_PERSONAL \",\n            \"personal-security  \": {\n                \"passphrase-format  \":   \"STRING  \",\n                \"wpa-passphrase  \":\"Welcome123%\"\n        }\n        ]\n}\n",
+							"raw": "{\n  \"wlan-ssid\": {\n    \"essid\": \"WorkshopLab12\",\n    \"type\": \"employee\",\n    \"hide_ssid\": false,\n    \"vlan\": \"\",\n    \"zone\": \"\",\n    \"opmode\": {\n      \"name\": \"wpa2-psk-mixed\"\n    },\n    \"wpa_passphrase\": \"YourSecurePassword123!\",\n    \"wpa_passphrase_changed\": true,\n    \"is_locked\": false,\n    \"captive_profile_name\": \"\",\n    \"bandwidth_limit_up\": \"\",\n    \"bandwidth_limit_down\": \"\",\n    \"bandwidth_limit_peruser_up\": \"\",\n    \"bandwidth_limit_peruser_down\": \"\",\n    \"access_rules\": []\n  }\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
