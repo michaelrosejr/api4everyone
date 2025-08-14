@@ -315,7 +315,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"wlan-ssid\": {\n    \"essid\": \"WorkshopLab12\",\n    \"type\": \"employee\",\n    \"hide_ssid\": false,\n    \"vlan\": \"\",\n    \"zone\": \"\",\n    \"opmode\": {\n      \"name\": \"wpa2-psk-mixed\"\n    },\n    \"wpa_passphrase\": \"YourSecurePassword123!\",\n    \"wpa_passphrase_changed\": true,\n    \"is_locked\": false,\n    \"captive_profile_name\": \"\",\n    \"bandwidth_limit_up\": \"\",\n    \"bandwidth_limit_down\": \"\",\n    \"bandwidth_limit_peruser_up\": \"\",\n    \"bandwidth_limit_peruser_down\": \"\",\n    \"access_rules\": []\n  }\n}\n",
+							"raw": "{\n  \"wlan-ssid\": [\n    {\n      \"essid\": {\n        \"name\": \"Workshop\"\n      },\n      \"type\": \"EMPLOYEE\",\n      \"vlan-id-range\": [\n        \"5\"\n      ],\n      \"forward-mode\": \"FORWARD_MODE_BRIDGE\",\n      \"ssid\": \"Workshop\",\n      \"opmode\": \"WPA2_PERSONAL\",\n      \"personal-security\": {\n        \"passphrase-format\": \"STRING\",\n        \"wpa-passphrase\": \"Welcome123%\"\n      }\n    }\n  ]\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -323,28 +323,79 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids/TestLab12?object_type=LOCAL&scope_id=44412250081&persona=CAMPUS_AP",
+							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"network-config",
 								"v1alpha1",
-								"wlan-ssids",
-								"TestLab12"
+								"wlan-ssids"
 							],
 							"query": [
 								{
 									"key": "object_type",
-									"value": "LOCAL"
+									"value": "LOCAL",
+									"disabled": true
 								},
 								{
 									"key": "scope_id",
-									"value": "44412250081"
+									"value": "44412250081",
+									"disabled": true
 								},
 								{
 									"key": "persona",
-									"value": "CAMPUS_AP"
+									"value": "CAMPUS_AP",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create WLAN Copy",
+					"id": "3b9f728a-5c2f-4798-8d54-32edf90358b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"wlan-ssid\": [\n    {\n      \"essid\": {\n        \"name\": \"Workshop\"\n      },\n      \"type\": \"EMPLOYEE\",\n      \"vlan-id-range\": [\n        \"5\"\n      ],\n      \"forward-mode\": \"FORWARD_MODE_BRIDGE\",\n      \"ssid\": \"Workshop\",\n      \"opmode\": \"WPA2_PERSONAL\",\n      \"personal-security\": {\n        \"passphrase-format\": \"STRING\",\n        \"wpa-passphrase\": \"Welcome123%\"\n      }\n    }\n  ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"network-config",
+								"v1alpha1",
+								"wlan-ssids"
+							],
+							"query": [
+								{
+									"key": "object_type",
+									"value": "LOCAL",
+									"disabled": true
+								},
+								{
+									"key": "scope_id",
+									"value": "44412250081",
+									"disabled": true
+								},
+								{
+									"key": "persona",
+									"value": "CAMPUS_AP",
+									"disabled": true
 								}
 							]
 						}
