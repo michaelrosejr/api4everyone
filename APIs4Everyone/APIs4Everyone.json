@@ -316,7 +316,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"wlan-ssid\": [\n        {\n            \"ssid\": \"MySSIDLab12\",\n            \"enable\": true,\n            \"forward-mode\": \"FORWARD_MODE_BRIDGE\",\n            \"dmo\": {\n                \"enable\": true,\n                \"channel-utilization-threshold\": 90,\n                \"clients-threshold\": 6\n            },\n            \"broadcast-filter-ipv4\": \"BCAST_FILTER_ARP\",\n            \"broadcast-filter-ipv6\": \"UCAST_FILTER_RA\",\n            \"optimize-mcast-rate\": false,\n            \"ssid-utf8\": true,\n            \"essid\": {\n                \"use-alias\": false,\n                \"name\": \"MySSIDLab12\"\n            },\n            \"advertise-apname\": false,\n            \"disable-on-6ghz-mesh\": false,\n            \"dot11k\": true,\n            \"dot11r\": false,\n            \"dtim-period\": 1,\n            \"ftm-responder\": false,\n            \"hide-ssid\": false,\n            \"auth-req-thresh\": 0,\n            \"explicit-ageout-client\": false,\n            \"inactivity-timeout\": 1000,\n            \"local-probe-req-thresh\": 0,\n            \"max-clients-threshold\": 1024,\n            \"rf-band\": \"5GHZ_6GHZ\",\n            \"rrm-quiet-ie\": false,\n            \"high-throughput\": {\n                \"enable\": true,\n                \"very-high-throughput\": true\n            },\n            \"g-legacy-rates\": {\n                \"basic-rates\": [\n                    \"RATE_12MB\",\n                    \"RATE_24MB\"\n                ],\n                \"tx-rates\": [\n                    \"RATE_12MB\",\n                    \"RATE_18MB\",\n                    \"RATE_24MB\",\n                    \"RATE_36MB\",\n                    \"RATE_48MB\",\n                    \"RATE_54MB\"\n                ]\n            },\n            \"a-legacy-rates\": {\n                \"basic-rates\": [\n                    \"RATE_12MB\",\n                    \"RATE_24MB\"\n                ],\n                \"tx-rates\": [\n                    \"RATE_12MB\",\n                    \"RATE_18MB\",\n                    \"RATE_24MB\",\n                    \"RATE_36MB\",\n                    \"RATE_48MB\",\n                    \"RATE_54MB\"\n                ]\n            },\n            \"high-efficiency\": {\n                \"enable\": true\n            },\n            \"extremely-high-throughput\": {\n                \"enable\": true,\n                \"mlo\": false,\n                \"beacon-protection\": false\n            },\n            \"opmode\": \"WPA3_SAE\",\n            \"mac-authentication\": false,\n            \"personal-security\": {\n                \"passphrase-format\": \"STRING\",\n                \"wpa-passphrase\": \"MyWorkshopPSK\"\n            },\n            \"cloud-auth\": false,\n            \"wpa3-transition-mode-enable\": true,\n            \"denylist\": true,\n            \"max-authentication-failures\": 0,\n            \"enforce-dhcp\": false,\n            \"pan\": false,\n            \"vlan-selector\": \"VLAN_RANGES\",\n            \"vlan-id-range\": [\"5\"],\n            \"out-of-service\": \"NONE\",\n            \"client-isolation\": false\n        }\n    ]\n}",
+							"raw": "{      \n    \"opmode\":   \"WPA2_PERSONAL \",\n          \"personal-security  \": {\n                \"passphrase-format  \":   \"STRING  \",\n                \"wpa-passphrase  \":\"Welcome123%\"\n        }\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -324,29 +324,28 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids?object_type=SHARED",
+							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids/TestLab12?object_type=LOCAL&scope_id=44412250081&persona=CAMPUS_AP",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"network-config",
 								"v1alpha1",
-								"wlan-ssids"
+								"wlan-ssids",
+								"TestLab12"
 							],
 							"query": [
 								{
 									"key": "object_type",
-									"value": "SHARED"
+									"value": "LOCAL"
 								},
 								{
 									"key": "scope_id",
-									"value": "44412250081",
-									"disabled": true
+									"value": "44412250081"
 								},
 								{
 									"key": "persona",
-									"value": "CAMPUS_AP",
-									"disabled": true
+									"value": "CAMPUS_AP"
 								}
 							]
 						}
