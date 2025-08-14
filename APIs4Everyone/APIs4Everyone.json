@@ -198,15 +198,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan/5",
+							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan",
 							"host": [
 								"{{baseUrl}}"
 							],
 							"path": [
 								"network-config",
 								"v1alpha1",
-								"layer2-vlan",
-								"5"
+								"layer2-vlan"
 							],
 							"query": [
 								{
