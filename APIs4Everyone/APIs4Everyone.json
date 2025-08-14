@@ -351,219 +351,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "Update WLAN PSK",
-					"id": "38ff947d-d776-47b2-ac91-f12319c8a21e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"opmode\": \"WPA3_SAE\",\n    \"personal-security\": {\n        \"passphrase-format\": \"STRING\",\n        \"wpa-passphrase\": \"d733013e0b\"\n    }\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids/Test1111?object_type=LOCAL&scope_id=42598981779&persona=CAMPUS_AP",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"network-config",
-								"v1alpha1",
-								"wlan-ssids",
-								"Test1111"
-							],
-							"query": [
-								{
-									"key": "object_type",
-									"value": "LOCAL"
-								},
-								{
-									"key": "scope_id",
-									"value": "42598981779"
-								},
-								{
-									"key": "persona",
-									"value": "CAMPUS_AP"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update Description Only",
-					"id": "8b3df1fa-febd-4ccf-a669-10486ea9da2b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"description\": \"Mercury8855\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids/Test1111?object_type=LOCAL&scope_id=42598981779&persona=CAMPUS_AP",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"network-config",
-								"v1alpha1",
-								"wlan-ssids",
-								"Test1111"
-							],
-							"query": [
-								{
-									"key": "object_type",
-									"value": "LOCAL"
-								},
-								{
-									"key": "scope_id",
-									"value": "42598981779"
-								},
-								{
-									"key": "persona",
-									"value": "CAMPUS_AP"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Change VLAN",
-					"id": "0b28e28b-524d-4f24-b2b5-90f55be14aa5",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"vlan-selector\": \"VLAN_RANGES\",\n    \"vlan-id-range\": [\n        \"20\"\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids/Test1111?object_type=LOCAL&scope_id=42598981779&persona=CAMPUS_AP",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"network-config",
-								"v1alpha1",
-								"wlan-ssids",
-								"Test1111"
-							],
-							"query": [
-								{
-									"key": "object_type",
-									"value": "LOCAL"
-								},
-								{
-									"key": "scope_id",
-									"value": "42598981779"
-								},
-								{
-									"key": "persona",
-									"value": "CAMPUS_AP"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Enable SSID",
-					"id": "21847f62-b121-4b92-afde-ced7315ab411",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"enable\": true\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids/Test1111?object_type=LOCAL&scope_id=42598981779&persona=CAMPUS_AP",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"network-config",
-								"v1alpha1",
-								"wlan-ssids",
-								"Test1111"
-							],
-							"query": [
-								{
-									"key": "object_type",
-									"value": "LOCAL"
-								},
-								{
-									"key": "scope_id",
-									"value": "42598981779"
-								},
-								{
-									"key": "persona",
-									"value": "CAMPUS_AP"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "List WLANs Copy",
-					"id": "0dc60716-3adc-4037-8c91-9a064dddf77f",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids/Beta"
-					},
-					"response": []
-				},
-				{
-					"name": "TEST",
-					"id": "c9779643-19dc-4d00-a115-b5af9e2749fb",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
 				}
 			],
 			"id": "76a4a172-31c9-44f2-bbdf-e3f299e9761f"
@@ -800,6 +587,200 @@
 			"name": "Utils",
 			"item": [
 				{
+					"name": "WLAN",
+					"item": [
+						{
+							"name": "Update WLAN PSK",
+							"id": "38ff947d-d776-47b2-ac91-f12319c8a21e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"opmode\": \"WPA3_SAE\",\n    \"personal-security\": {\n        \"passphrase-format\": \"STRING\",\n        \"wpa-passphrase\": \"d733013e0b\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids/Test1111?object_type=LOCAL&scope_id=42598981779&persona=CAMPUS_AP",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"network-config",
+										"v1alpha1",
+										"wlan-ssids",
+										"Test1111"
+									],
+									"query": [
+										{
+											"key": "object_type",
+											"value": "LOCAL"
+										},
+										{
+											"key": "scope_id",
+											"value": "42598981779"
+										},
+										{
+											"key": "persona",
+											"value": "CAMPUS_AP"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Description Only",
+							"id": "8b3df1fa-febd-4ccf-a669-10486ea9da2b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"Mercury8855\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids/Test1111?object_type=LOCAL&scope_id=42598981779&persona=CAMPUS_AP",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"network-config",
+										"v1alpha1",
+										"wlan-ssids",
+										"Test1111"
+									],
+									"query": [
+										{
+											"key": "object_type",
+											"value": "LOCAL"
+										},
+										{
+											"key": "scope_id",
+											"value": "42598981779"
+										},
+										{
+											"key": "persona",
+											"value": "CAMPUS_AP"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change VLAN",
+							"id": "0b28e28b-524d-4f24-b2b5-90f55be14aa5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"vlan-selector\": \"VLAN_RANGES\",\n    \"vlan-id-range\": [\n        \"20\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids/Test1111?object_type=LOCAL&scope_id=42598981779&persona=CAMPUS_AP",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"network-config",
+										"v1alpha1",
+										"wlan-ssids",
+										"Test1111"
+									],
+									"query": [
+										{
+											"key": "object_type",
+											"value": "LOCAL"
+										},
+										{
+											"key": "scope_id",
+											"value": "42598981779"
+										},
+										{
+											"key": "persona",
+											"value": "CAMPUS_AP"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Enable SSID",
+							"id": "21847f62-b121-4b92-afde-ced7315ab411",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"enable\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/network-config/v1alpha1/wlan-ssids/Test1111?object_type=LOCAL&scope_id=42598981779&persona=CAMPUS_AP",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"network-config",
+										"v1alpha1",
+										"wlan-ssids",
+										"Test1111"
+									],
+									"query": [
+										{
+											"key": "object_type",
+											"value": "LOCAL"
+										},
+										{
+											"key": "scope_id",
+											"value": "42598981779"
+										},
+										{
+											"key": "persona",
+											"value": "CAMPUS_AP"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "0f57dcf0-5ff1-4ee4-8dc3-11ae7adcae59"
+				},
+				{
 					"name": "Delete Site",
 					"id": "cb39ffe9-0503-4d20-9f9f-a8ce59da3979",
 					"protocolProfileBehavior": {
@@ -896,42 +877,6 @@
 					"response": []
 				},
 				{
-					"name": "List VLANs in Library Copy",
-					"id": "3e27a9a9-a45d-434f-89a3-a9a6928b7441",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan/20",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"network-config",
-								"v1alpha1",
-								"layer2-vlan",
-								"20"
-							],
-							"query": [
-								{
-									"key": "view_type",
-									"value": "LOCAL",
-									"disabled": true
-								},
-								{
-									"key": "scope_id",
-									"value": "42598981779",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "View Hierarchy",
 					"id": "465152a1-a3f4-4439-8f90-f6aac5b61cc3",
 					"protocolProfileBehavior": {
@@ -966,6 +911,18 @@
 						"method": "GET",
 						"header": [],
 						"url": "{{baseUrl}}/network-config/v1alpha1/policies"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "e3657799-ddf2-446e-a857-0b149335d0d8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
