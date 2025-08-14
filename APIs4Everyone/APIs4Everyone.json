@@ -316,7 +316,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{      \n    \"opmode\":   \"WPA2_PERSONAL \",\n          \"personal-security  \": {\n                \"passphrase-format  \":   \"STRING  \",\n                \"wpa-passphrase  \":\"Welcome123%\"\n        }\n",
+							"raw": "{      \"wlan-ssid\": [{\n            \"opmode\": \"WPA2_PERSONAL \",\n            \"personal-security  \": {\n                \"passphrase-format  \":   \"STRING  \",\n                \"wpa-passphrase  \":\"Welcome123%\"\n        }\n        ]\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
