@@ -305,6 +305,54 @@
 					"response": []
 				},
 				{
+					"name": "List WLAN Clients",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "13e1a1ac-f8a0-43be-bbaa-d09a4f4a7635",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "781ed0f9-e192-48c2-8c3f-c6677ab3a3e6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/network-monitoring/v1alpha1/clients",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"network-monitoring",
+								"v1alpha1",
+								"clients"
+							],
+							"query": [
+								{
+									"key": "view_type",
+									"value": "LOCAL",
+									"disabled": true
+								},
+								{
+									"key": "scope_id",
+									"value": "44120773658",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Create WLAN",
 					"id": "4a93ce11-1f9a-4801-9095-e9598b6f45ce",
 					"protocolProfileBehavior": {
