@@ -453,6 +453,25 @@
 			"id": "76a4a172-31c9-44f2-bbdf-e3f299e9761f"
 		},
 		{
+			"name": "Devices",
+			"item": [
+				{
+					"name": "List Devices",
+					"id": "ff6908b4-61e0-4645-bfc1-304e9444a288",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/network-monitoring/v1alpha1/devices"
+					},
+					"response": []
+				}
+			],
+			"id": "478d422a-603e-41a2-93d6-49191f038528"
+		},
+		{
 			"name": "GLP",
 			"item": [
 				{
