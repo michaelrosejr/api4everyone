@@ -327,7 +327,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/network-monitoring/v1alpha1/clients",
+							"raw": "{{baseUrl}}/network-monitoring/v1alpha1/clients?site-id=197670139",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -343,9 +343,8 @@
 									"disabled": true
 								},
 								{
-									"key": "scope_id",
-									"value": "44120773658",
-									"disabled": true
+									"key": "site-id",
+									"value": "197670139"
 								}
 							]
 						}
