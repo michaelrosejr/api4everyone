@@ -477,7 +477,23 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{baseUrl}}/network-monitoring/v1alpha1/devices"
+						"url": {
+							"raw": "{{baseUrl}}/network-monitoring/v1alpha1/device-inventory?filter=deviceType eq 'ACCESS_POINT'",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"network-monitoring",
+								"v1alpha1",
+								"device-inventory"
+							],
+							"query": [
+								{
+									"key": "filter",
+									"value": "deviceType eq 'ACCESS_POINT'"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -681,6 +697,7 @@
 				}
 			],
 			"id": "1d9e5800-6e4d-444f-8747-83eddac24f22",
+			"description": "This folder includes API requests using the GLP APIs. These API require a client_id and client_secret for GLP.",
 			"auth": {
 				"type": "bearer",
 				"bearer": {
@@ -1154,7 +1171,7 @@
 			"id": "61857af8-f8f1-4748-b2fe-16bc0f7d23f8"
 		},
 		{
-			"name": "Star Wars",
+			"name": "Random User API",
 			"item": [
 				{
 					"name": "New Request",
