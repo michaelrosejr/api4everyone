@@ -467,6 +467,19 @@
 						"url": "{{baseUrl}}/network-monitoring/v1alpha1/devices"
 					},
 					"response": []
+				},
+				{
+					"name": "List Devices by Filter",
+					"id": "bbe914a4-43c8-4fe8-958c-46c087a4c729",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/network-monitoring/v1alpha1/devices"
+					},
+					"response": []
 				}
 			],
 			"id": "478d422a-603e-41a2-93d6-49191f038528"
