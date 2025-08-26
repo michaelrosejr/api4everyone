@@ -1059,115 +1059,13 @@
 						"url": "{{baseUrl}}/network-config/v1alpha1/policies"
 					},
 					"response": []
-				},
-				{
-					"name": "New Request",
-					"id": "e3657799-ddf2-446e-a857-0b149335d0d8",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
 				}
 			],
 			"id": "f9e8f9a8-25ce-4f94-892a-217dc11ba9f9"
 		},
 		{
 			"name": "Scopes",
-			"item": [
-				{
-					"name": "VLANs",
-					"item": [
-						{
-							"name": "List VLANs",
-							"id": "f9bca49a-1c72-4867-a399-30861140488f",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"network-config",
-										"v1alpha1",
-										"layer2-vlan"
-									],
-									"query": [
-										{
-											"key": "view_type",
-											"value": "LOCAL",
-											"disabled": true
-										},
-										{
-											"key": "scope_id",
-											"value": "42598981779",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Create VLAN in Scope",
-							"id": "408531ec-2180-433e-8fd9-baa3f580a3c5",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"l2-vlan\": [\n        {\n            \"vlan\": 44,\n            \"enable\": true,\n            \"description\": \"api4everyone\"\n            \n        }\n    ]\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/network-config/v1alpha1/layer2-vlan?scope_id=44120773658",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"network-config",
-										"v1alpha1",
-										"layer2-vlan"
-									],
-									"query": [
-										{
-											"key": "view_type",
-											"value": "LOCAL",
-											"disabled": true
-										},
-										{
-											"key": "scope_id",
-											"value": "44120773658"
-										},
-										{
-											"key": "persona",
-											"value": "GLOBAL",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "879e0048-fde6-45fb-9599-2de53d6c7009"
-				}
-			],
+			"item": [],
 			"id": "61857af8-f8f1-4748-b2fe-16bc0f7d23f8"
 		},
 		{
@@ -1181,12 +1079,40 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "https://randomuser.me/api/?results=100&seed=workshop&nat=gb",
+							"protocol": "https",
+							"host": [
+								"randomuser",
+								"me"
+							],
+							"path": [
+								"api",
+								""
+							],
+							"query": [
+								{
+									"key": "results",
+									"value": "100"
+								},
+								{
+									"key": "seed",
+									"value": "workshop"
+								},
+								{
+									"key": "nat",
+									"value": "gb",
+									"type": "text"
+								}
+							]
+						}
 					},
 					"response": []
 				}
 			],
-			"id": "31b62380-fbee-43f6-bac3-d04d844a0e21"
+			"id": "31b62380-fbee-43f6-bac3-d04d844a0e21",
+			"description": "This API will generate random user data.\n\nSee [randomuser.me docs](https://randomuser.me/documentation)"
 		}
 	],
 	"auth": {
