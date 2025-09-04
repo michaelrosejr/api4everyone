@@ -1067,7 +1067,7 @@
 			"name": "Random User API",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Request Random Users",
 					"id": "0ba6dd27-de7f-4290-8514-db25f2d855c8",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1097,8 +1097,7 @@
 								},
 								{
 									"key": "nat",
-									"value": "gb",
-									"type": "text"
+									"value": "gb"
 								}
 							]
 						}
