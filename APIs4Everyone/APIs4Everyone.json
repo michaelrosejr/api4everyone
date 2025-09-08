@@ -305,53 +305,6 @@
 					"response": []
 				},
 				{
-					"name": "List WLAN Clients",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "13e1a1ac-f8a0-43be-bbaa-d09a4f4a7635",
-								"exec": [
-									""
-								],
-								"type": "text/javascript",
-								"packages": {}
-							}
-						}
-					],
-					"id": "781ed0f9-e192-48c2-8c3f-c6677ab3a3e6",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{baseUrl}}/network-monitoring/v1alpha1/clients?site-id=197670139",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"network-monitoring",
-								"v1alpha1",
-								"clients"
-							],
-							"query": [
-								{
-									"key": "view_type",
-									"value": "LOCAL",
-									"disabled": true
-								},
-								{
-									"key": "site-id",
-									"value": "197670139"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Create WLAN",
 					"id": "4a93ce11-1f9a-4801-9095-e9598b6f45ce",
 					"protocolProfileBehavior": {
@@ -1037,6 +990,72 @@
 			"id": "f9e8f9a8-25ce-4f94-892a-217dc11ba9f9"
 		},
 		{
+			"name": "Monitoring",
+			"item": [
+				{
+					"name": "Get Workshop WLAN",
+					"id": "c5ab1185-db4c-4949-a9ee-048e46ba0277",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/network-monitoring/v1alpha1/wlans/Workshop"
+					},
+					"response": []
+				},
+				{
+					"name": "List Clients Connected",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "13e1a1ac-f8a0-43be-bbaa-d09a4f4a7635",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "781ed0f9-e192-48c2-8c3f-c6677ab3a3e6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/network-monitoring/v1alpha1/clients?site-id=197670139",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"network-monitoring",
+								"v1alpha1",
+								"clients"
+							],
+							"query": [
+								{
+									"key": "view_type",
+									"value": "LOCAL",
+									"disabled": true
+								},
+								{
+									"key": "site-id",
+									"value": "197670139"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "ad7e8c98-4546-4241-b5c5-477b32213d76"
+		},
+		{
 			"name": "Random User API",
 			"item": [
 				{
@@ -1080,25 +1099,6 @@
 			],
 			"id": "31b62380-fbee-43f6-bac3-d04d844a0e21",
 			"description": "This API will generate random user data.\n\nSee [randomuser.me docs](https://randomuser.me/documentation)"
-		},
-		{
-			"name": "Monitoring",
-			"item": [
-				{
-					"name": "Get Workshop WLAN",
-					"id": "c5ab1185-db4c-4949-a9ee-048e46ba0277",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{baseUrl}}/network-monitoring/v1alpha1/wlans/Workshop"
-					},
-					"response": []
-				}
-			],
-			"id": "ad7e8c98-4546-4241-b5c5-477b32213d76"
 		}
 	],
 	"auth": {
