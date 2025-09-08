@@ -411,7 +411,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"scope-map\": [\n    {\n      \"scope-name\": \"44412250081\",\n      \"persona\": \"CAMPUS_AP\",\n      \"resource\": \"layer2-vlan/5\"\n    }\n  ]\n}",
+							"raw": "{\n  \"scope-map\": [\n    {\n      \"scope-name\": \"197670158\",\n      \"persona\": \"CAMPUS_AP\",\n      \"resource\": \"wlan-ssids/Workshop\"\n    }\n  ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
