@@ -362,7 +362,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"wlan-ssid\": [\n    {\n      \"essid\": {\n        \"name\": \"Workshop\"\n      },\n      \"type\": \"EMPLOYEE\",\n      \"vlan-id-range\": [\n        \"5\"\n      ],\n      \"forward-mode\": \"FORWARD_MODE_BRIDGE\",\n      \"ssid\": \"Workshop\",\n      \"opmode\": \"WPA2_PERSONAL\",\n      \"personal-security\": {\n        \"passphrase-format\": \"STRING\",\n        \"wpa-passphrase\": \"Welcome123%\"\n      }\n    }\n  ]\n}\n",
+							"raw": "{\n  \"wlan-ssid\": [\n    {\n      \"enable\": true,\n      \"essid\": {\n        \"name\": \"Workshop\"\n      },\n      \"type\": \"EMPLOYEE\",\n      \"vlan-selector\": \"VLAN_RANGES\",\n      \"vlan-id-range\": [\n        \"5\"\n      ],\n      \"forward-mode\": \"FORWARD_MODE_BRIDGE\",\n      \"ssid\": \"Workshop\",\n      \"opmode\": \"WPA2_PERSONAL\",\n      \"personal-security\": {\n        \"passphrase-format\": \"STRING\",\n        \"wpa-passphrase\": \"Welcome123%\"\n      }\n    }\n  ]\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
