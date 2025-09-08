@@ -401,6 +401,28 @@
 					"response": []
 				},
 				{
+					"name": "Map WLAN to Site",
+					"id": "93c0ba60-b1a2-46d4-83b9-c895fd632720",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"scope-map\": [\n    {\n      \"scope-name\": \"44412250081\",\n      \"persona\": \"CAMPUS_AP\",\n      \"resource\": \"layer2-vlan/5\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/network-config/v1alpha1/scope-maps"
+					},
+					"response": []
+				},
+				{
 					"name": "Create WLAN Copy",
 					"id": "3b9f728a-5c2f-4798-8d54-32edf90358b9",
 					"protocolProfileBehavior": {
