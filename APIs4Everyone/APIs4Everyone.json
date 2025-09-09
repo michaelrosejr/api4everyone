@@ -1102,16 +1102,26 @@
 		}
 	],
 	"auth": {
-		"type": "bearer",
-		"bearer": {
-			"token": "{{central_token}}"
+		"type": "oauth2",
+		"oauth2": {
+			"client_authentication": "body",
+			"clientSecret": "{{client_secret}}",
+			"clientId": "{{client_id}}",
+			"accessTokenUrl": "https://sso.common.cloud.hpe.com/as/token.oauth2",
+			"grant_type": "client_credentials",
+			"tokenName": "central_token",
+			"refreshRequestParams": [],
+			"tokenRequestParams": [],
+			"authRequestParams": [],
+			"challengeAlgorithm": "S256",
+			"addTokenTo": "queryParams"
 		}
 	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "0639f687-f313-4c38-b4c8-4c424e0fe135",
+				"id": "217dfb93-b3d0-4ebe-848a-9c23ee17b039",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
@@ -1122,7 +1132,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "af388c17-6bac-4c7f-9016-82a64a577175",
+				"id": "1a11aa07-374b-42fa-b312-480656e03cd2",
 				"type": "text/javascript",
 				"packages": {},
 				"exec": [
