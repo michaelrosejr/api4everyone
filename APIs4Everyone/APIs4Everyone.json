@@ -106,23 +106,6 @@
 					"response": []
 				},
 				{
-					"name": "Create Site Copy",
-					"id": "67233da2-3fe6-4387-b306-2a4d935a1109",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": "{{baseUrl}}/network-config/v1alpha1/sites"
-					},
-					"response": []
-				},
-				{
 					"name": "Find Global ID",
 					"id": "8c6c004c-9c8c-4fbe-b61a-040f62370469",
 					"protocolProfileBehavior": {
